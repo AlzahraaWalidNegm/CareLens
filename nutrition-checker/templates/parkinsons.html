@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Parkinson's Disease Check</title>
+  <!-- Update the stylesheet path if yours is named/styles differently -->
+  <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Check Parkinson's Disease</h1>
+    <form method="POST" action="/parkinsons">
+      <!-- MDVP: Fo -->
+      <div class="form-group">
+        <label for="fo">MDVP: Fo (Fundamental Frequency in Hz):</label>
+        <input type="number" step="0.1" name="fo" placeholder="e.g., 119.3" required />
+      </div>
+
+      <!-- MDVP: Fhi -->
+      <div class="form-group">
+        <label for="fhi">MDVP: Fhi (Maximum Fundamental Frequency in Hz):</label>
+        <input type="number" step="0.1" name="fhi" placeholder="e.g., 200.2" required />
+      </div>
+
+      <!-- MDVP: Flo -->
+      <div class="form-group">
+        <label for="flo">MDVP: Flo (Minimum Fundamental Frequency in Hz):</label>
+        <input type="number" step="0.1" name="flo" placeholder="e.g., 85.1" required />
+      </div>
+
+      <!-- MDVP: Jitter (%) -->
+      <div class="form-group">
+        <label for="Jitter_percent">MDVP: Jitter (%) (Variability in Fundamental Frequency):</label>
+        <input type="number" step="0.001" name="Jitter_percent" placeholder="e.g., 0.68" required />
+      </div>
+
+      <!-- MDVP: Jitter (Abs) -->
+      <div class="form-group">
+        <label for="Jitter_Abs">MDVP: Jitter (Abs) (Absolute Jitter in seconds):</label>
+        <input type="number" step="0.0001" name="Jitter_Abs" placeholder="e.g., 0.00006" required />
+      </div>
+
+      <!-- MDVP: RAP -->
+      <div class="form-group">
+        <label for="RAP">MDVP: RAP (Relative Amplitude Perturbation):</label>
+        <input type="number" step="0.0001" name="RAP" placeholder="e.g., 0.028" required />
+      </div>
+
+      <!-- MDVP: PPQ -->
+      <div class="form-group">
+        <label for="PPQ">MDVP: PPQ (Pitch Period Perturbation Quotient):</label>
+        <input type="number" step="0.0001" name="PPQ" placeholder="e.g., 0.025" required />
+      </div>
+
+      <!-- Jitter: DDP -->
+      <div class="form-group">
+        <label for="DDP">Jitter: DDP (Difference of Difference of Periods):</label>
+        <input type="number" step="0.001" name="DDP" placeholder="e.g., 0.070" required />
+      </div>
+
+      <!-- MDVP: Shimmer -->
+      <div class="form-group">
+        <label for="Shimmer">MDVP: Shimmer (dB, variability in amplitude):</label>
+        <input type="number" step="0.001" name="Shimmer" placeholder="e.g., 0.045" required />
+      </div>
+
+      <!-- MDVP: Shimmer (dB) -->
+      <div class="form-group">
+        <label for="Shimmer_dB">MDVP: Shimmer (dB) (decibel measure of amplitude variation):</label>
+        <input type="number" step="0.001" name="Shimmer_dB" placeholder="e.g., 0.540" required />
+      </div>
+
+      <!-- Shimmer: APQ3 -->
+      <div class="form-group">
+        <label for="APQ3">Shimmer: APQ3 (Amplitude Perturbation Quotient over 3 periods):</label>
+        <input type="number" step="0.0001" name="APQ3" placeholder="e.g., 0.023" required />
+      </div>
+
+      <!-- Shimmer: APQ5 -->
+      <div class="form-group">
+        <label for="APQ5">Shimmer: APQ5 (Amplitude Perturbation Quotient over 5 periods):</label>
+        <input type="number" step="0.0001" name="APQ5" placeholder="e.g., 0.027" required />
+      </div>
+
+      <!-- MDVP: APQ -->
+      <div class="form-group">
+        <label for="APQ">MDVP: APQ (Amplitude Perturbation Quotient):</label>
+        <input type="number" step="0.0001" name="APQ" placeholder="e.g., 0.032" required />
+      </div>
+
+      <!-- Shimmer: DDA -->
+      <div class="form-group">
+        <label for="DDA">Shimmer: DDA (Degree of Dysharmony of Amplitude):</label>
+        <input type="number" step="0.0001" name="DDA" placeholder="e.g., 0.072" required />
+      </div>
+
+      <!-- NHR -->
+      <div class="form-group">
+        <label for="NHR">NHR (Noise-to-Harmonics Ratio):</label>
+        <input type="number" step="0.0001" name="NHR" placeholder="e.g., 0.022" required />
+      </div>
+
+      <!-- HNR -->
+      <div class="form-group">
+        <label for="HNR">HNR (Harmonics-to-Noise Ratio):</label>
+        <input type="number" step="0.1" name="HNR" placeholder="e.g., 21.0" required />
+      </div>
+
+      <!-- RPDE -->
+      <div class="form-group">
+        <label for="RPDE">RPDE (Recurrence Period Density Entropy):</label>
+        <input type="number" step="0.0001" name="RPDE" placeholder="e.g., 0.405" required />
+      </div>
+
+      <!-- DFA -->
+      <div class="form-group">
+        <label for="DFA">DFA (Detrended Fluctuation Analysis):</label>
+        <input type="number" step="0.0001" name="DFA" placeholder="e.g., 0.672" required />
+      </div>
+
+      <!-- Spread1 -->
+      <div class="form-group">
+        <label for="spread1">Spread1 (Nonlinear measure of fundamental frequency, typical negative value):</label>
+        <input type="number" step="0.0001" name="spread1" placeholder="e.g., -4.813" required />
+      </div>
+
+      <!-- Spread2 -->
+      <div class="form-group">
+        <label for="spread2">Spread2 (Variation of fundamental frequency):</label>
+        <input type="number" step="0.0001" name="spread2" placeholder="e.g., 2.349" required />
+      </div>
+
+      <!-- D2 -->
+      <div class="form-group">
+        <label for="D2">D2 (Correlation Dimension):</label>
+        <input type="number" step="0.0001" name="D2" placeholder="e.g., 2.475" required />
+      </div>
+
+      <!-- PPE -->
+      <div class="form-group">
+        <label for="PPE">PPE (Pitch Period Entropy):</label>
+        <input type="number" step="0.0001" name="PPE" placeholder="e.g., 0.153" required />
+      </div>
+
+      <button type="submit">Check Parkinson's</button>
+    </form>
+
+    {% if diagnosis %}
+      <div class="result">
+        <h3>Diagnosis:</h3>
+        <p>{{ diagnosis }}</p>
+      </div>
+
+      <!-- After getting diagnosis, proceed to nutrition with query param disease=parkinsons -->
+      <a class="btn" href="/nutrition?disease=parkinsons">Check Nutrition Next</a>
+    {% endif %}
+
+    <a href="/">Back to Home</a>
+  </div>
+</body>
+</html>

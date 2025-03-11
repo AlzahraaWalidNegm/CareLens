@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Diabetes Self-Assessment</title>
+  <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Check Diabetes</h1>
+    <form method="POST" action="/diabetes">
+      <!-- Pregnancies -->
+      <div class="form-group">
+        <label for="Pregnancies">Pregnancies (number of times pregnant):</label>
+        <input type="number" name="Pregnancies" placeholder="e.g., 2" min="0" required>
+      </div>
+
+      <!-- Glucose -->
+      <div class="form-group">
+        <label for="Glucose">Glucose Level (mg/dl):</label>
+        <input type="number" name="Glucose" placeholder="e.g., 120" min="0" required>
+      </div>
+
+      <!-- Blood Pressure -->
+      <div class="form-group">
+        <label for="BloodPressure">Blood Pressure (mmHg):</label>
+        <input type="number" name="BloodPressure" placeholder="e.g., 80" min="0" required>
+      </div>
+
+      <!-- Skin Thickness -->
+      <div class="form-group">
+        <label for="SkinThickness">Skin Thickness (Triceps, mm):</label>
+        <input type="number" name="SkinThickness" placeholder="e.g., 20" min="0" required>
+      </div>
+
+      <!-- Insulin -->
+      <div class="form-group">
+        <label for="Insulin">Insulin Level (µU/mL):</label>
+        <input type="number" name="Insulin" placeholder="e.g., 79" min="0" required>
+      </div>
+
+      <!-- BMI -->
+      <div class="form-group">
+        <label for="BMI">BMI (kg/m²):</label>
+        <input type="number" step="0.1" name="BMI" placeholder="e.g., 28.5" min="0" required>
+      </div>
+
+      <!-- Diabetes Pedigree Function -->
+      <div class="form-group">
+        <label for="DiabetesPedigreeFunction">Diabetes Pedigree Function (e.g., family history):</label>
+        <input type="number" step="0.001" name="DiabetesPedigreeFunction" placeholder="e.g., 0.472" min="0" required>
+      </div>
+
+      <!-- Age -->
+      <div class="form-group">
+        <label for="Age">Age of the Person (years):</label>
+        <input type="number" name="Age" placeholder="e.g., 45" min="0" required>
+      </div>
+
+      <button type="submit">Check Diabetes</button>
+    </form>
+
+    {% if diagnosis %}
+      <div class="result">
+        <h3>Diagnosis:</h3>
+        <p>{{ diagnosis }}</p>
+      </div>
+
+      <!-- Button to go to the nutrition checker, passing a query param disease=diabetes -->
+      <a class="btn" href="/nutrition?disease=diabetes">Check Nutrition Next</a>
+    {% endif %}
+
+    <a href="/">Back to Home</a>
+  </div>
+</body>
+</html>

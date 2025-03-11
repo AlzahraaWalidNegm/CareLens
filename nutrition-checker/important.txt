@@ -1,0 +1,8 @@
+Step1: Open nutrition-checker folder
+Step2: Press windows + r and search about cmd
+Step3: Copy nutrition-checker folder path
+Step4: Write cd copied path [like this: cd C:\Users\LENOVO\Desktop\project] and press enter
+Step5: Write "code ." and press enter
+Step6: Install requirements libraries "pip install + library name"
+Step7: Run the "run.py" file
+Step8: Test the tests images

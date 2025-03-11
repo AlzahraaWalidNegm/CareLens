@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nutrition Checker</title>
+  <link rel="stylesheet" href="/static/css/styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Nutrition Checker</h1>
+    {% if disease %}
+      <p>You recently checked for <strong>{{ disease }}</strong>. 
+         Here’s how nutrition can affect that condition:</p>
+      {% if disease == "diabetes" %}
+        <p>For diabetes, be mindful of carbohydrates and added sugars.</p>
+      {% elif disease == "heart" %}
+        <p>For heart disease, pay attention to sodium, cholesterol, and saturated fats.</p>
+      {% elif disease == "parkinsons" %}
+        <p>For Parkinson's, a balanced diet with adequate fiber can be beneficial.</p>
+      {% endif %}
+    {% else %}
+      <p>Upload an image of a product label to analyze its nutritional values.</p>
+    {% endif %}
+    <!-- Form to upload an image -->
+    <form id="uploadForm">
+        <input type="hidden" name="disease" value="{{ disease if disease else '' }}">
+        <input type="file" id="imageInput" name="image" accept="image/*" required>
+        <button type="submit">Upload & Analyze</button>
+      </form>
+    
+    <!-- Results container that is initially hidden -->
+    <div id="results" class="hidden">
+      <h2>Results</h2>
+      <div id="nutrition"></div>
+      <div id="validation"></div>
+    </div>
+
+    <a href="/">Back to Home</a>
+  </div>
+
+  <script src="/static/js/scripts.js"></script>
+</body>
+</html>

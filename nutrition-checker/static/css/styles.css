@@ -1,0 +1,133 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Container */
+  .container {
+    max-width: 600px;
+    margin: 50px auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Headings */
+  h1, h2, h3 {
+    text-align: center;
+    color: #333;
+  }
+  
+  /* Paragraphs */
+  p {
+    color: #555;
+    line-height: 1.5;
+  }
+  
+  /* Form Styling */
+  form {
+    margin-top: 20px;
+  }
+  .form-group {
+    margin-bottom: 15px;
+  }
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  input[type="number"],
+  input[type="text"],
+  input[type="file"],
+  select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 5px;
+  }
+  
+  /* Button */
+  button {
+    display: inline-block;
+    background: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  button:hover {
+    background: #0056b3;
+  }
+  
+  /* Results Section */
+  .result,
+  #results {
+    margin-top: 20px;
+    background: #e9ffe9;
+    padding: 10px;
+    border: 1px solid #b2d8b2;
+    border-radius: 4px;
+  }
+  
+  /* Link Styling */
+  a {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    color: #007bff;
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Hidden Elements */
+  .hidden {
+    display: none;
+  }
+  
+  /* Home Page Options */
+  .options {
+    text-align: center;
+    margin-top: 20px;
+  }
+  .options a.btn {
+    display: inline-block;
+    background: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 16px;
+  }
+  .options a.btn:hover {
+    background: #0056b3;
+  }
+  
+  /* Additional Styling for Forms on Disease Pages */
+  form input[type="number"],
+  form input[type="text"] {
+    margin-bottom: 10px;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 600px) {
+    .container {
+      margin: 20px;
+      padding: 15px;
+    }
+  
+    button {
+      width: 100%;
+    }
+  }
+  
